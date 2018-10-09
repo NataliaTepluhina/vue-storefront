@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue Storefront | Production setup</title>
+    <meta name="description" content="Headless PWA for eCommerce">
+    <link rel="icon" href="/vue-storefront/favicon.png">
+    
+    <link rel="preload" href="/vue-storefront/assets/css/32.styles.dc030840.css" as="style"><link rel="preload" href="/vue-storefront/assets/js/app.a20a9c19.js" as="script"><link rel="preload" href="/vue-storefront/assets/js/3.a9da7b84.js" as="script"><link rel="prefetch" href="/vue-storefront/assets/js/17.f0f9623a.js"><link rel="prefetch" href="/vue-storefront/assets/js/1.9bf61a05.js"><link rel="prefetch" href="/vue-storefront/assets/js/2.f75411de.js"><link rel="prefetch" href="/vue-storefront/assets/js/4.1c5a09d6.js"><link rel="prefetch" href="/vue-storefront/assets/js/5.8389d33d.js"><link rel="prefetch" href="/vue-storefront/assets/js/6.79d94183.js"><link rel="prefetch" href="/vue-storefront/assets/js/7.9e4f8ac4.js"><link rel="prefetch" href="/vue-storefront/assets/js/8.ec2f8ae1.js"><link rel="prefetch" href="/vue-storefront/assets/js/9.5ff2c7d8.js"><link rel="prefetch" href="/vue-storefront/assets/js/10.4412cce4.js"><link rel="prefetch" href="/vue-storefront/assets/js/11.63fb9e06.js"><link rel="prefetch" href="/vue-storefront/assets/js/12.0cd04c9c.js"><link rel="prefetch" href="/vue-storefront/assets/js/13.c3e13326.js"><link rel="prefetch" href="/vue-storefront/assets/js/14.d3a16c8b.js"><link rel="prefetch" href="/vue-storefront/assets/js/15.c91035f3.js"><link rel="prefetch" href="/vue-storefront/assets/js/16.cd9211a8.js"><link rel="prefetch" href="/vue-storefront/assets/js/0.d45d755b.js"><link rel="prefetch" href="/vue-storefront/assets/js/18.7d0f4a23.js"><link rel="prefetch" href="/vue-storefront/assets/js/19.3276c8ee.js"><link rel="prefetch" href="/vue-storefront/assets/js/20.f74070ef.js"><link rel="prefetch" href="/vue-storefront/assets/js/21.5ca2863c.js"><link rel="prefetch" href="/vue-storefront/assets/js/22.40989d40.js"><link rel="prefetch" href="/vue-storefront/assets/js/23.ea48332c.js"><link rel="prefetch" href="/vue-storefront/assets/js/24.3206cfa4.js"><link rel="prefetch" href="/vue-storefront/assets/js/25.c62ced79.js"><link rel="prefetch" href="/vue-storefront/assets/js/26.ffa758b9.js"><link rel="prefetch" href="/vue-storefront/assets/js/27.f2634fb5.js"><link rel="prefetch" href="/vue-storefront/assets/js/28.d89c0cd2.js"><link rel="prefetch" href="/vue-storefront/assets/js/29.4df5991f.js"><link rel="prefetch" href="/vue-storefront/assets/js/30.e43b568e.js"><link rel="prefetch" href="/vue-storefront/assets/js/31.15c06ed8.js">
+    <link rel="stylesheet" href="/vue-storefront/assets/css/32.styles.dc030840.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/vue-storefront/" class="home-link router-link-active"><!----><span class="site-name">
+      Vue Storefront
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="https://www.youtube.com/channel/UCkm1F3Cglty3CE1QwKQUhhg" target="_blank" rel="noopener noreferrer" class="nav-link">YouTube</a></div><div class="nav-item"><a href="https://medium.com/the-vue-storefront-journal" target="_blank" rel="noopener noreferrer" class="nav-link">Medium</a></div><a href="https://github.com/DivanteLtd/vue-storefront" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://www.youtube.com/channel/UCkm1F3Cglty3CE1QwKQUhhg" target="_blank" rel="noopener noreferrer" class="nav-link">YouTube</a></div><div class="nav-item"><a href="https://medium.com/the-vue-storefront-journal" target="_blank" rel="noopener noreferrer" class="nav-link">Medium</a></div><a href="https://github.com/DivanteLtd/vue-storefront" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav><ul class="sidebar-links"><li><a href="/vue-storefront/guide/" class="sidebar-link">About</a></li><li><div class="sidebar-group"><p class="sidebar-heading open"><span>Installation</span><!----></p><ul class="sidebar-group-items"><li><a href="/vue-storefront/guide/installation/linux-mac.html" class="sidebar-link">Installing on Linux/MacOS</a></li><li><a href="/vue-storefront/guide/installation/windows.html" class="sidebar-link">Installing on Windows</a></li><li><a href="/vue-storefront/guide/installation/magento.html" class="sidebar-link">Integration with Magento 2</a></li><li><a href="/vue-storefront/guide/installation/production-setup.html" class="active sidebar-link">Production setup</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue-storefront/guide/installation/production-setup.html#production-setup-bare-vps" class="sidebar-link">Production setup - bare VPS</a></li><li class="sidebar-sub-header"><a href="/vue-storefront/guide/installation/production-setup.html#production-setup-using-docker-kubernetes" class="sidebar-link">Production setup - using Docker / Kubernetes</a></li></ul></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>Basics</span><!----></p><ul class="sidebar-group-items"><li><a href="/vue-storefront/guide/basics/project-structure.html" class="sidebar-link">Project structure</a></li><li><a href="/vue-storefront/guide/basics/configuration.html" class="sidebar-link">Configuration file explained</a></li><li><a href="/vue-storefront/guide/basics/contributing.html" class="sidebar-link">How to Contribute</a></li><li><a href="/vue-storefront/guide/basics/modules.html" class="sidebar-link">Modules</a></li><li><a href="/vue-storefront/guide/basics/feature-list.html" class="sidebar-link">Feature list</a></li><li><a href="/vue-storefront/guide/basics/recipes.html" class="sidebar-link">FAQ and Recipes</a></li><li><a href="/vue-storefront/guide/basics/typescript.html" class="sidebar-link">TypeScript Action Plan</a></li><li><a href="/vue-storefront/guide/basics/graphql.html" class="sidebar-link">GraphQL Action Plan</a></li><li><a href="/vue-storefront/guide/basics/entity.html" class="sidebar-link">Data Entity Types</a></li><li><a href="/vue-storefront/guide/basics/ssr-cache.html" class="sidebar-link">SSR Cache</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>Core and themes</span><!----></p><ul class="sidebar-group-items"><li><a href="/vue-storefront/guide/core-themes/themes.html" class="sidebar-link">Themes in Vue Storefront</a></li></ul></div></li></ul></div><div class="page"><div class="content"><h1 id="production-setup"><a href="#production-setup" aria-hidden="true" class="header-anchor">#</a> Production setup</h1><p>If you like to start developing sites using Vue Storefront, probably you need to start with the <a href="/vue-storefront/guide/installation/linux-mac.html">Installation guide</a>. For the development purposes you'll probably be using <code>yarn install</code> / <code>npm run installer</code> sequence which will setup Vue Storefront locally using the automated installer and prepared Docker images for having Elastic Search and Redis support.</p><p>Development mode means you're using node.js based server as HTTP service and running the app on the <code>3000</code> TCP port. As it's great for local testing it's <strong>not recommended</strong> to use installer and direct user access to node.js in production configurations.</p><h2 id="production-setup-bare-vps"><a href="#production-setup-bare-vps" aria-hidden="true" class="header-anchor">#</a> Production setup - bare VPS</h2><p>To run Vue Storefront in the production mode without Docker/Kubernetes you'll need the Virtual Private Server with <code>root</code> access (for the setup purposes). We assume that you're using <code>Debian GNU Linux</code> in the following steps.</p><p>Assumptions for the rest of this tutorial:</p><ul><li>You're having root access to Debian Linux machine;</li><li>We'll be using the default local ports <code>3000</code> for <a href="https://github.com/DivanteLtd/vue-storefront" target="_blank" rel="noopener noreferrer"><code>vue-storefront</code></a> and <code>8080</code> for <a href="https://github.com/DivanteLtd/vue-storefront-api" target="_blank" rel="noopener noreferrer"><code>vue-storefront-api</code></a>; the ports <strong>should not be exposed</strong> as they will be hidden behind <strong>nginx proxy</strong>;</li><li>We're using <strong>prod.vuestorefront.io</strong> as a domain name - please replace it with your host URL address;</li><li>We assume that you have SSL certificate for <strong>prod.vuestorefront.io</strong> (or your domain of course). SSL encryption is required for PWA + service workers;</li></ul><p>General Solution Architecture:
+<em>USER -&gt; nginx proxy -&gt; vue-storefront / vue-storefront-api</em></p><p>We'll be hiding the <code>vue-storefront</code> and <code>vue-storefront-api</code> services behind nginx proxy. You can use nginx for caching proxy, but in our case it will be just forwarding the requests without cache (as VS is pretty fast and caching is not required). The key features we're using are: SSL encryption, gzip-encoding, url routing (to merge <code>vue-storefront</code> and <code>vue-storefront-api</code> services under one domain).</p><h3 id="prerequisites"><a href="#prerequisites" aria-hidden="true" class="header-anchor">#</a> Prerequisites</h3><p>Vue Storefront requires <strong>Elastic Search</strong> and the <strong>Redis server</strong> installed. By default, in the development mode, both dependencies are provided with the <code>docker-compose.yml</code> Docker images. However, for the production purposes we recommend to install the servers natively.</p><p>For the purposes of this tutorial we will use default packages distributed along with the Debian operating systems, without any security hardening, config hardening operations.</p><p><strong>Please make sure</strong> that your security/devops team have taken a look at the configs you're using and do harden the server configuration before launching your app publicly!</p><p>First, let's create the user (as root user):</p><pre class="language-bash"><code><span class="token function">mkdir</span> /home/www
+<span class="token function">useradd</span> -m -d /home/www/vuestorefront vuestorefront
+</code></pre><p>Then install the Elasticsearch and Redis (as root user):</p><pre class="language-bash"><code><span class="token function">apt-get</span> update
+<span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">curl</span>
+<span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">git</span>
+
+<span class="token function">curl</span> -sL https://deb.nodesource.com/setup_8.x <span class="token operator">|</span> <span class="token function">bash</span> -
+<span class="token function">apt-get</span> <span class="token function">install</span> -y nodejs
+<span class="token function">npm</span> <span class="token function">install</span> -g yarn
+
+<span class="token function">apt-get</span> <span class="token function">install</span> redis-server
+
+<span class="token function">apt-get</span> <span class="token function">install</span> openjdk-8-jre
+<span class="token function">curl</span> -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.9.deb
+dpkg -i elasticsearch-5.6.9.deb
+/etc/init.d/elasticsearch start
+
+<span class="token function">apt-get</span> <span class="token function">install</span> imagemagick
+<span class="token function">apt-get</span> <span class="token function">install</span> nginx
+</code></pre><h3 id="nginx"><a href="#nginx" aria-hidden="true" class="header-anchor">#</a> Nginx</h3><p>We decided to use <strong>nginx</strong> as a HTTP proxy - exposed in front of the users, handling the network traffic and dealing with the <code>vue-storefront</code> and the <code>vue-storefront-api</code> apps as a backend.</p><p>This is a general rule of setting up a production node.js app which gives you a lot of flexibility regarding the SSL, gzip compression, URL routing and other techniques to be configured without additional hassle. You can use any other proxy server for this purpose - such as Varnish or Apache2 + mod_proxy.</p><p>Some additional materials:</p><ul><li><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04" target="_blank" rel="noopener noreferrer">How to setup production node.js app in the Digital Ocean environment (Ubuntu 16)</a></li><li><a href="https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/" target="_blank" rel="noopener noreferrer">How to setup nginx reverse proxy</a></li></ul><h4 id="nginx-configuration"><a href="#nginx-configuration" aria-hidden="true" class="header-anchor">#</a> Nginx configuration</h4><p><a href="https://github.com/DivanteLtd/vue-storefront/tree/develop/doc/production-setup/etc/nginx/sites-enabled" target="_blank" rel="noopener noreferrer">Here is the complete <code>/etc/nginx/sites-enabled/prod.vuestorefront.io</code> file</a>.</p><p>Create nginx config file from the template (please run as a root user):</p><pre class="language-bash"><code><span class="token function">curl</span> https://raw.githubusercontent.com/DivanteLtd/vue-storefront/develop/doc/production-setup/etc/nginx/sites-enabled/prod.vuestorefront.io <span class="token operator">&gt;</span> /etc/nginx/sites-available/prod.vuestorefront.io
+<span class="token function">ln</span> -s /etc/nginx/sites-available/prod.vuestorefront.io /etc/nginx/sites-enabled/prod.vuestorefront.io
+</code></pre><p><strong>Install the SSL certificate</strong></p><pre class="language-bash"><code><span class="token function">mkdir</span> /etc/nginx/ssl
+<span class="token function">nano</span> /etc/nginx/ssl/prod.vuestorefront.io.chained.crt
+<span class="token function">nano</span> /etc/nginx/ssl/prod.vuestorefront.io.key
+<span class="token function">nano</span> /etc/nginx/ssl/dhparam.pem
+</code></pre><p>Now you can run the nginx:</p><pre class="language-bash"><code>/etc/init.d/nginx restart
+</code></pre><p>Please find the full comments on the following sections of the file below:</p><pre class="language-js"><code>server <span class="token punctuation">{</span>
+	listen <span class="token number">80</span><span class="token punctuation">;</span>
+	server_name prod<span class="token punctuation">.</span>vuestorefront<span class="token punctuation">.</span>io<span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">301</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>prod<span class="token punctuation">.</span>vuestorefront<span class="token punctuation">.</span>io$request_uri<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>This section runs the standard http://prod.vuestorefront.io and creates a wildcard redirect from http://prod.vuestorefront.io/* -&gt; https://prod.vuestorefront.io/. SSL secured connection is a must for run PWA and use service-workers.</p><pre class="language-js"><code>server <span class="token punctuation">{</span>
+	listen <span class="token number">443</span> ssl<span class="token punctuation">;</span>
+	server_name prod<span class="token punctuation">.</span>vuestorefront<span class="token punctuation">.</span>io http2<span class="token punctuation">;</span>
+
+	ssl on<span class="token punctuation">;</span>
+</code></pre><p>We're using <code>http2</code> but it's not required. This section is for setting up the SSL secured virtual host of Vue Storefront frontend.</p><pre class="language-text"><code>ssl_certificate /etc/nginx/ssl/prod.vuestorefront.io.chained.crt;
+ssl_certificate_key /etc/nginx/ssl/prod.vuestorefront.io.key;
+</code></pre><p>We assume that the certificate related files are stored in the <code>/etc/nginx/ssl/</code>. Please point it to your certificate files.</p><pre class="language-text"><code>ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
+ssl_prefer_server_ciphers on;
+ssl_ciphers ECDHE-RSA-AES256-GCM-SHA512:DHE-RSA-AES256-GCM-SHA512:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:DHE-RSA-AES256-SHA;
+ssl_ecdh_curve secp384r1;
+ssl_session_timeout 10m;
+ssl_session_cache shared:SSL:10m;
+ssl_session_tickets off;
+ssl_stapling on;
+ssl_stapling_verify on;
+resolver 8.8.8.8 8.8.4.4 valid=300s;
+resolver_timeout 5s;
+
+ssl_dhparam /etc/nginx/ssl/dhparam.pem;
+
+add_header Strict-Transport-Security &quot;max-age=31536000&quot; always;
+add_header X-Frame-Options DENY;
+add_header X-Content-Type-Options nosniff;
+add_header X-XSS-Protection &quot;1; mode=block&quot;;
+add_header X-Robots-Tag none;
+</code></pre><p>Here we go with the SSL settings - based on our best experiences from the past. Please read details in the <a href="http://nginx.org/en/docs/http/configuring_https_servers.html" target="_blank" rel="noopener noreferrer">nginx documentation</a> if you like 😉</p><pre class="language-text"><code>gzip on;
+gzip_proxied any;
+gzip_types
+  text/css
+  text/javascript
+  text/xml
+  application/javascript
+  application/json
+  text/json
+  text/html;
+}
+</code></pre><p>Vue Storefront SSR responses contain the full markup + JSON objects included for speed-up the first page view. Unfortunately - among with significant JS bundle sizes - it can generate a significant network load. We're optimizing it with using gzip compression server side.</p><pre class="language-text"><code>location / {
+  proxy_pass http://localhost:3000/;
+}
+</code></pre><p>We're using <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html" target="_blank" rel="noopener noreferrer"><code>proxy_pass</code></a> from the <code>ngx_http_proxy_module</code> to pull the content from the Vue Storefront nodejs server. Site will be available under https://prod.vuestorefront.io/</p><pre class="language-text"><code>location /assets/ {
+  proxy_pass http://localhost:3000/assets/;
+}
+</code></pre><p>The same module is used for providing user with the static assets. Assets will be available under: https://prod.vuestorefront.io/assets</p><pre class="language-text"><code>location /api/ {
+  proxy_pass http://localhost:8080/api/;
+}
+</code></pre><p>The next proxy section is used for serving the API. It's a proxy to <a href="https://github.com/DivanteLtd/vue-storefront-api" target="_blank" rel="noopener noreferrer"><code>vue-storefront-api</code></a> app running on <code>8080</code> port (default config). API will be available under: https://prod.vuestorefront.io/api</p><pre class="language-text"><code>location /img/ {
+  proxy_pass http://localhost:8080/img/;
+}
+</code></pre><p>The last proxy is used for serving product images. It's a proxy to <a href="https://github.com/DivanteLtd/vue-storefront-api" target="_blank" rel="noopener noreferrer"><code>vue-storefront-api</code></a> app running on <code>8080</code> port (default config). Images will be available under: https://prod.vuestorefront.io/img</p><h4 id="apache2-configuration"><a href="#apache2-configuration" aria-hidden="true" class="header-anchor">#</a> Apache2 configuration</h4><p>In case you are already using the apache2 web-server in your environment as well and can't (or don't want) to use nginx, you can also set up apache2 as an reverse proxy instead of nginx. This is done by adding this block to your apache2 virtual host.</p><pre class="language-text"><code>ProxyRequests off
+
+ProxyPass /api/ http://localhost:8080/api/
+ProxyPassReverse /api http://localhost:8080/api/
+
+ProxyPass /img/ http://localhost:8080/img/
+ProxyPassReverse /img http://localhost:8080/img/
+
+ProxyPass /assets/ http://localhost:3000/assets/
+ProxyPassReverse /assets http://localhost:3000/assets/
+
+ProxyPass / http://localhost:3000/
+ProxyPassReverse / http://localhost:3000/
+</code></pre><p>You also need to enable <a href="https://httpd.apache.org/docs/current/mod/mod_proxy.html" target="_blank" rel="noopener noreferrer">mod_proxy</a> for this.</p><h3 id="vue-storefront-and-vue-storefront-api"><a href="#vue-storefront-and-vue-storefront-api" aria-hidden="true" class="header-anchor">#</a> Vue Storefront and Vue Storefront API</h3><p>After you have the nginx set up, you should get a <code>502 error</code> when accessing the https://prod.vuestorefront.io. This is totally fine! We've just missed the most important step which is running backend services that will power up our installation. Now nginx is trying to connect to <code>localhost:3000</code> for <code>vue-storefront</code> and <code>localhost:8080</code> for <code>vue-storefront-api</code> without any success.</p><p>We create a Linux user called <code>vuestorefront</code> and go to <code>/home/www/vuestorefront</code> which is our home directory.</p><p>You need to clone the <code>vue-storefront</code> and the <code>vue-storefront-api</code> repos accordingly with the following commands:</p><pre class="language-bash"><code><span class="token function">su</span> vuestorefront
+<span class="token function">cd</span> /home/www/vuestorefront
+<span class="token function">git</span> clone https://github.com/DivanteLtd/vue-storefront.git
+<span class="token function">git</span> clone https://github.com/DivanteLtd/vue-storefront-api.git
+</code></pre><p>Then you will need to install the required node packages:</p><pre class="language-bash"><code><span class="token function">cd</span> /home/www/vuestorefront/vue-storefront-api
+yarn <span class="token function">install</span>
+</code></pre><p>... and ...</p><pre class="language-bash"><code><span class="token function">cd</span> /home/www/vuestorefront/vue-storefront
+yarn <span class="token function">install</span>
+</code></pre><p>It may take a few minutes. Once the modules are installed we can set configuration files for both services.</p><h4 id="vue-storefront-configuration"><a href="#vue-storefront-configuration" aria-hidden="true" class="header-anchor">#</a> Vue Storefront configuration</h4><p>The full configuration files are available here to download: <a href="https://github.com/DivanteLtd/vue-storefront/tree/develop/doc/production-setup/vue-storefront/config" target="_blank" rel="noopener noreferrer">vue-storefront</a> and <a href="https://github.com/DivanteLtd/vue-storefront/tree/develop/doc/production-setup/vue-storefront-api/config" target="_blank" rel="noopener noreferrer">vue-storefront-api</a>.</p><p>Please create the <code>vue-storefront-api/config/local.json</code> and <code>vue-storefront/config/local.json</code> files accordingly.</p><pre class="language-bash"><code><span class="token function">curl</span> https://raw.githubusercontent.com/DivanteLtd/vue-storefront/develop/doc/production-setup/vue-storefront-api/config/local.json <span class="token operator">&gt;</span> /home/www/vuestorefront/vue-storefront-api/config/local.json
+</code></pre><p>... and ...</p><pre class="language-bash"><code><span class="token function">curl</span> https://raw.githubusercontent.com/DivanteLtd/vue-storefront/develop/doc/production-setup/vue-storefront/config/local.json <span class="token operator">&gt;</span> /home/www/vuestorefront/vue-storefront/config/local.json
+</code></pre><p>Please find the key sections of the <code>vue-storefront/config/local.json</code> file described in below:</p><pre class="language-json"><code><span class="token property">&quot;elasticsearch&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;httpAuth&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;host&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://prod.vuestorefront.io/api/catalog&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vue_storefront_catalog&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token property">&quot;storeViews&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;mapStoreUrlsFor&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;de&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;it&quot;</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;multistore&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;de&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;disabled&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;elasticsearch&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;httpAuth&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;host&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://prod.vuestorefront.io/api/catalog&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vue_storefront_catalog_de&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;it&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;disabled&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;elasticsearch&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;httpAuth&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;host&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://prod.vuestorefront.io/api/catalog&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vue_storefront_catalog_it&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre><p>We're setting up the product's endpoint to https://prod.vuestorefront.io/api/catalog (please use your domain accordingly of course). As you may notice, the <code>/api</code> url is proxied by the nginx to <code>localhost:8080</code> - our <code>vue-storefront-api</code> instance.</p><pre class="language-json"><code><span class="token property">&quot;cart&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;synchronize&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;synchronize_totals&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;create_endpoint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://prod.vuestorefront.io/api/cart/create?token={{token}}&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;updateitem_endpoint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://prod.vuestorefront.io/api/cart/update?token={{token}}&amp;cartId={{cartId}}&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;deleteitem_endpoint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://prod.vuestorefront.io/api/cart/delete?token={{token}}&amp;cartId={{cartId}}&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;pull_endpoint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://prod.vuestorefront.io/api/cart/pull?token={{token}}&amp;cartId={{cartId}}&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;totals_endpoint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://prod.vuestorefront.io/api/cart/totals?token={{token}}&amp;cartId={{cartId}}&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;paymentmethods_endpoint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://prod.vuestorefront.io/api/cart/payment-methods?token={{token}}&amp;cartId={{cartId}}&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;shippingmethods_endpoint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://prod.vuestorefront.io/api/cart/shipping-methods?token={{token}}&amp;cartId={{cartId}}&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;shippinginfo_endpoint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://prod.vuestorefront.io/api/cart/shipping-information?token={{token}}&amp;cartId={{cartId}}&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;collecttotals_endpoint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://prod.vuestorefront.io/api/cart/collect-totals?token={{token}}&amp;cartId={{cartId}}&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;deletecoupon_endpoint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://prod.vuestorefront.io/api/cart/delete-coupon?token={{token}}&amp;cartId={{cartId}}&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;applycoupon_endpoint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://prod.vuestorefront.io/api/cart/apply-coupon?token={{token}}&amp;cartId={{cartId}}&amp;coupon={{coupon}}&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre><p>There are 27 more instances of <code>prod.vuestorefront.io</code> to be replaced with your production URL address in this file - please just do so 😃</p><h4 id="vue-storefront-api-configuration"><a href="#vue-storefront-api-configuration" aria-hidden="true" class="header-anchor">#</a> Vue Storefront API configuration</h4><p>The <a href="https://github.com/DivanteLtd/vue-storefront/tree/develop/doc/production-setup/vue-storefront-api/config" target="_blank" rel="noopener noreferrer">provided vue-storefront-api configuration</a> requires almost no changes.</p><p>The only lines you need to alter are:</p><pre class="language-json"><code><span class="token property">&quot;imageable&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;namespace&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;maxListeners&quot;</span><span class="token operator">:</span> <span class="token number">512</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;imageSizeLimit&quot;</span><span class="token operator">:</span> <span class="token number">1024</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;timeouts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;convert&quot;</span><span class="token operator">:</span> <span class="token number">5000</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;identify&quot;</span><span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;download&quot;</span><span class="token operator">:</span> <span class="token number">1000</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;whitelist&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;allowedHosts&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token string">&quot;.*divante.pl&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;.*vuestorefront.io&quot;</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;trustedHosts&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token string">&quot;.*divante.pl&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;.*vuestorefront.io&quot;</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;keepDownloads&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;maxDownloadCacheSize&quot;</span><span class="token operator">:</span> <span class="token number">1000</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;tmpPathRoot&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/tmp&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token property">&quot;elasticsearch&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;host&quot;</span><span class="token operator">:</span> <span class="token string">&quot;localhost&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;port&quot;</span><span class="token operator">:</span> <span class="token string">&quot;9200&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;indices&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;vue_storefront_catalog&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;vue_storefront_catalog_it&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;vue_storefront_catalog_de&quot;</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre><p>You should put here the <code>allowedHosts</code> and <code>trustedHosts</code> for the Imageable - to download the product images. The domain name points to the <strong>Magento2</strong> instance where images are sourced. In this example Magento2 is running under <strong>http://demo-magento2.vuestorefront.io</strong>.</p><h4 id="build-vs"><a href="#build-vs" aria-hidden="true" class="header-anchor">#</a> Build VS</h4><p>Before we can run Vue Storefront and Vue Storefront API we should build it in the production mode. To do so please just execute the following commands:</p><pre class="language-bash"><code><span class="token function">cd</span> /home/www/vuestorefront/vue-storefront/
+yarn build
+</code></pre><pre class="language-bash"><code><span class="token function">cd</span> /home/www/vuestorefront/vue-storefront-api/
+yarn build
+</code></pre><h4 id="data-import"><a href="#data-import" aria-hidden="true" class="header-anchor">#</a> Data import</h4><p>Vue Storefront needs to have some data in the ElasticSearch to properly display products and categories. Of course you can install <a href="https://github.com/DivanteLtd/mage2vuestorefront" target="_blank" rel="noopener noreferrer">mage2vuestorefront</a> and configure the data pump to synchronize and update the ElasticSearch index whenever data is being changed in Magento. For purposes of this tutorial we'll just restore the data from the JSON file.</p><p>You can easily dump your current VS index using the following command (your local installation):</p><pre class="language-bash"><code><span class="token function">cd</span> vue-storefront-api
+<span class="token function">rm</span> var/catalog.json
+<span class="token function">npm</span> run dump
+</code></pre><p>Now in the <code>var/catalog.json</code> you have your current database dump. Please transfer this file to the server for example using the following ssh command:</p><pre class="language-bash"><code><span class="token function">ssh</span> vuestorefront@prod.vuestorefront.io <span class="token function">rm</span> ~/vue-storefront-api/var/catalog.json
+<span class="token function">scp</span> vue-storefront-api/var/catalog.json vuestorefront@prod.vuestorefront.io:~/vue-storefront-api/var/catalog.json
+</code></pre><p>Then, after logging in to your <code>prod.vuestorefront.io</code> server as a <code>vuestorefront</code> you can run the following command to import the data:</p><pre class="language-bash"><code><span class="token function">cd</span> vue-storefront-api
+<span class="token function">npm</span> run db new
+<span class="token function">npm</span> run restore2main
+<span class="token function">npm</span> run db rebuild
+</code></pre><h4 id="running-the-vue-storefront-and-vue-storefront-api"><a href="#running-the-vue-storefront-and-vue-storefront-api" aria-hidden="true" class="header-anchor">#</a> Running the Vue Storefront and Vue Storefront API</h4><p>After everything set, you can just start the <code>vue-storefront</code> and <code>vue-storefront-api</code>:</p><pre class="language-bash"><code><span class="token function">cd</span> vue-storefront-api
+yarn start
+<span class="token function">cd</span> vue-storefront
+yarn start
+</code></pre><p>Both applications use <a href="https://pm2.io/runtime" target="_blank" rel="noopener noreferrer"><code>PM2</code> process manager</a> in the production mode (<code>start</code> commands) to manage and respawn the nodejs processes when needed.</p><h2 id="production-setup-using-docker-kubernetes"><a href="#production-setup-using-docker-kubernetes" aria-hidden="true" class="header-anchor">#</a> Production setup - using Docker / Kubernetes</h2><p>To be prepared.</p></div><div class="content edit-link"><a href="https://github.com/DivanteLtd/vue-storefront/edit/master/docs/guide/installation/production-setup.md" target="_blank" rel="noopener noreferrer">Edit this page</a><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div><div class="content page-nav"><p class="inner"><span class="prev">
+        ← <a href="/vue-storefront/guide/installation/magento.html" class="prev">
+          Integration with Magento 2
+        </a></span><span class="next"><a href="/vue-storefront/guide/basics/project-structure.html">
+          Project structure
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/vue-storefront/assets/js/3.a9da7b84.js" defer></script><script src="/vue-storefront/assets/js/app.a20a9c19.js" defer></script>
+  </body>
+</html>
